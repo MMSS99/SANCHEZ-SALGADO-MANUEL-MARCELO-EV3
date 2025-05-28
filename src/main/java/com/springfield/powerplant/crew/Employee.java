@@ -17,7 +17,8 @@ public class Employee {
             this.experienceLevel = experienceLevel;
             this.shift = shift;
         } else {
-            System.out.println("ERROR EN CREACIÓN: La ID del empleado no puede ser nula");
+            IllegalStateException ise = new IllegalStateException("ERROR EN CREACIÓN: La ID del empleado no puede ser nula");
+            throw ise;
         }
     }
 
