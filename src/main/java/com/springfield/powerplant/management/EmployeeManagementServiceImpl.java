@@ -8,6 +8,7 @@ import com.springfield.powerplant.crew.Shift;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
     private HashMap<Integer, Employee> employeeDatabase = new HashMap<Integer, Employee>();
@@ -49,6 +50,22 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
     @Override
     public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel){
         employee.setExperienceLevel(experienceLevel);
+    }
+
+    @Override
+    public Map<String, Long> getExperienceLevelStatistics(){
+        HashMap<String, Long> experienceLevelStatistics = new HashMap<String, Long>();
+        for (ExperienceLevel experienceLevel : ExperienceLevel.values()) {
+            String level = experienceLevel.getLevel();
+            Integer count = 0;
+            for (Employee employee : employeeDatabase.values()) {
+                if (employee.getExperienceLevel().equals(experienceLevel)) {
+                    count++;
+                }
+            }
+            experienceLevelStatistics.put(experienceLevel.getLevel(), count.longValue());
+        }
+        return experienceLevelStatistics;
     }
 
 }
