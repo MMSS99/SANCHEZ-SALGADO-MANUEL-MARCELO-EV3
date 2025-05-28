@@ -5,7 +5,9 @@ import com.springfield.powerplant.crew.Employee;
 import com.springfield.powerplant.crew.ExperienceLevel;
 import com.springfield.powerplant.crew.Shift;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class EmployeeManagementServiceImpl implements EmployeeManagementService {
     private HashMap<Integer, Employee> employeeDatabase = new HashMap<Integer, Employee>();
@@ -29,6 +31,16 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         employeeDatabase.forEach((id, employee) -> {
             System.out.println(employee.toString());
         });
+    }
+
+    public List<Employee> findEmployeesByDepartment(Department department){
+        List<Employee> employees = new ArrayList<Employee>();
+        employeeDatabase.forEach((id, employee) -> {
+            if (employee.getDepartment().equals(department)){
+                employees.add(employee);
+            }
+        });
+        return employees.isEmpty() ? null : employees;
     }
 
 }
