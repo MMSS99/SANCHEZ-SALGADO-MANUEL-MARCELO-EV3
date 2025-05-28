@@ -76,7 +76,7 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
                 shiftChecker.putIfAbsent(employee.getShift(), employee);
             }
         }
-        return (shiftChecker.size() == 3) ? false : true;
+        return (shiftChecker.size() == 3) ? true : false;
     }
 
 }
