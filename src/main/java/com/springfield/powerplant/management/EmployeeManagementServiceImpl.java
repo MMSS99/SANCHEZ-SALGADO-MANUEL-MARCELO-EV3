@@ -25,4 +25,10 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         return employeeDatabase.size();
     }
 
+    public void listCrew(){
+        employeeDatabase.forEach((id, employee) -> {
+            System.out.println(employee.toString());
+        });
+    }
+
 }
