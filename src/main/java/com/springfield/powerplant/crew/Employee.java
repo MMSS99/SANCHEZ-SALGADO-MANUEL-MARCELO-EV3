@@ -1,5 +1,7 @@
 package com.springfield.powerplant.crew;
 
+import java.util.Optional;
+
 public class Employee {
     private final Integer ID;
     private String name;
@@ -8,8 +10,8 @@ public class Employee {
     private Shift shift;
 
     public Employee(Integer ID, String name, Department department, ExperienceLevel experienceLevel, Shift shift){
+        this.ID = ID;
         if (ID != null){
-            this.ID = ID;
             this.name = name;
             this.department = department;
             this.experienceLevel = experienceLevel;
