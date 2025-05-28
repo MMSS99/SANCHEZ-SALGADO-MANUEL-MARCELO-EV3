@@ -46,4 +46,9 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         return employees.isEmpty() ? null : employees;
     }
 
+    @Override
+    public void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel){
+        employee.setExperienceLevel(experienceLevel);
+    }
+
 }

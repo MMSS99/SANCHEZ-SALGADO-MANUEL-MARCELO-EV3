@@ -12,5 +12,6 @@ public interface EmployeeManagementService {
     int crewSize();
     void listCrew();
     List<Employee> findEmployeesByDepartment(Department department);
+    void changeEmployeeExperienceLevel(Employee employee, ExperienceLevel experienceLevel);
 }
 
