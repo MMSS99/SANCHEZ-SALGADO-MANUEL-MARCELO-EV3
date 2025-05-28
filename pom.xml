@@ -41,7 +41,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.springfield.###</mainClass>
+                            <mainClass>com.springfield.powerplant.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
