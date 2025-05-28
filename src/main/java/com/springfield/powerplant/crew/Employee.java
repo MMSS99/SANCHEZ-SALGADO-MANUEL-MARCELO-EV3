@@ -7,7 +7,7 @@ public class Employee {
     private ExperienceLevel experienceLevel;
     private Shift shift;
 
-    Employee(Integer ID, String name, Department department, ExperienceLevel experienceLevel, Shift shift){
+    public Employee(Integer ID, String name, Department department, ExperienceLevel experienceLevel, Shift shift){
         if (ID != null){
             this.ID = ID;
             this.name = name;
