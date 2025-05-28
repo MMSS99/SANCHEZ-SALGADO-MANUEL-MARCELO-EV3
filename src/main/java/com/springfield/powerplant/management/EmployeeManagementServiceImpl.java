@@ -21,4 +21,8 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         return employee;
     }
 
+    public int crewSize(){
+        return employeeDatabase.size();
+    }
+
 }

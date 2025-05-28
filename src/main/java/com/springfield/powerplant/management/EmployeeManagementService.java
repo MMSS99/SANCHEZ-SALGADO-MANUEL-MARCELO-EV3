@@ -7,4 +7,6 @@ import com.springfield.powerplant.crew.Shift;
 
 public interface EmployeeManagementService {
     Employee createEmployee(String name, Integer ID, Department department, ExperienceLevel experienceLevel, Shift shift);
+    int crewSize();
 }
+
