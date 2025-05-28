@@ -68,4 +68,15 @@ public class EmployeeManagementServiceImpl implements EmployeeManagementService 
         return experienceLevelStatistics;
     }
 
+    @Override
+    public boolean isDepartmentFullyCovered(Department department){
+        HashMap<Shift, Employee> shiftChecker = new HashMap<Shift, Employee>();
+        for (Employee employee : employeeDatabase.values()) {
+            if (employee.getDepartment().equals(department)){
+                shiftChecker.putIfAbsent(employee.getShift(), employee);
+            }
+        }
+        return (shiftChecker.size() == 3) ? false : true;
+    }
+
 }
