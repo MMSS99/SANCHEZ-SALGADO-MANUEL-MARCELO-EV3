@@ -1,11 +1,11 @@
 package com.springfield.powerplant;
 
-import com.springfield.powerplant.model.Department;
-import com.springfield.powerplant.model.Employee;
-import com.springfield.powerplant.model.ExperienceLevel;
-import com.springfield.powerplant.model.Shift;
-import com.springfield.powerplant.service.EmployeeManagementService;
-import com.springfield.powerplant.service.impl.EmployeeManagementServiceImpl;
+import com.springfield.powerplant.crew.Department;
+import com.springfield.powerplant.crew.Employee;
+import com.springfield.powerplant.crew.ExperienceLevel;
+import com.springfield.powerplant.crew.Shift;
+import com.springfield.powerplant.management.EmployeeManagementService;
+import com.springfield.powerplant.management.EmployeeManagementServiceImpl;
 
 import java.util.List;
 import java.util.Map;
